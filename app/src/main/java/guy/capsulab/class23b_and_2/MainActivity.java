@@ -35,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculate() {
-
+        String name = main_EDT_name.getText().toString();
+        String grossStr = main_EDT_gross.getText().toString();
+        int gross = Integer.valueOf(grossStr);
+        int net = (int) (gross * 0.8);
+        main_LBL_result.setText(name + ":\n" + net);
     }
 
 }
